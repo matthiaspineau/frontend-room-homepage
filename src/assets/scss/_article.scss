@@ -1,0 +1,95 @@
+.article {
+
+    &__text {
+        position: relative;
+        padding: 50px 30px;
+    }
+
+    &__link {
+        cursor: pointer;
+        &__text {
+            display: inline-block;
+            padding-right: 35px;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 10px;;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        
+        &__icon {
+            display: inline-block;
+            max-width: 40px;
+        }
+
+        &:hover {
+            color: $dark-gray;
+        }
+    }
+
+    @media (min-width: 1460px) {
+        display: flex;
+
+        &__media {
+            width: 61.5%;
+          
+        }
+
+        &__text {
+            width: 38.5%;
+        }
+    }
+    
+}
+
+.article__nav {
+    position: absolute;
+    top: -56px;
+    right: 0px;
+    height: 56px;
+    width: 112px;
+    display: flex;
+
+    &__left, &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+        background: $black;
+        transition: 0.3s;
+
+        img {
+            width: 8px;
+            
+        }
+    }
+
+    &__left:hover, &__right:hover {
+        background: $very-dark-gray;
+    }
+
+    @media (min-width: 1460px) {
+        top: inherit;
+        right: inherit;
+        left: 0;
+        bottom: 0;
+        height: 80px;
+        width: 160px;
+
+        &__left, &__right {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 15px;
+                
+            }
+        }
+    }
+}

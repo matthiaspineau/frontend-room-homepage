@@ -1,0 +1,145 @@
+.nav {
+    position: relative;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 110px;
+    padding: 0 15px;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    // background: rgba(0,0,0,0.3);
+    z-index: 45; 
+
+   
+    h1 {
+        max-width: 62px;
+        height: 14px;
+        margin-left: calc(50% - 48px);
+    }
+
+    .btn__menu {
+        max-width: 20px;
+        margin-left: 15px;
+        height: 14px;
+        cursor: pointer;
+    }
+
+    &__ul {
+        display: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        color: $black;
+    }
+
+    &__li {
+        position: relative;
+        display: inline-block;
+        padding: 0 8px;
+        font-family: $font-spartan-semi-bold;
+        font-weight: 600;
+        list-style-type: none;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: calc(50% - 8px);
+            height: 2px;
+            width: 0px;
+            background: $black;
+            transition: 0.3s;
+        }
+
+        &:hover::after {
+            width: 16px;
+        }
+    }
+
+    .divider {
+        display: none;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 0 55px;
+        background: transparent;
+
+        .btn__menu {
+            display: none;
+        }
+        h1 {
+            max-width: 62px;
+            height: 14px;
+            margin-left: 0;
+        }
+
+        .navbar__ul {
+            display: block;
+            margin-left: 45px;
+            color: $white;
+        }
+
+        &__li {
+            &::after { 
+                background: $white;
+            }
+        }
+
+        .divider {
+            display: none;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.navbar.active {
+    background: $white;
+
+    h1 {
+        display: none;
+    }
+
+    .navbar__ul {
+        display: block;
+        margin-left: 55px;
+        $color: $black;
+    }
+
+    .divider {
+        display: block;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        height: 100vh;
+    }
+
+    @media (min-width: 1440px) {
+        background: transparent;
+
+        .btn__menu {
+            display: none;
+        }
+
+        h1 {
+            display: block;
+        }
+
+        .navbar__ul {
+            display: block;
+            margin-left: 45px;
+            $color: $white
+        }
+
+        .divider {
+            display: none;
+        }
+    }
+}

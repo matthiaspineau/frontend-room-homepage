@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'spartan-medium';
+    src: url('../fonts/Spartan-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'spartan-semi-bold';
+    src: url('../fonts/Spartan-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'spartan-bold';
+    src: url('../fonts/Spartan-Bold.ttf');
+    // font-weight: 700;
+    // font-style: normal;
+}
+
+
+// ----- font
+$font-spartan-medium: 'spartan-medium';
+$font-spartan-semi-bold: 'spartan-semi-bold';
+$font-spartan-bold: 'spartan-bold';
+
+
