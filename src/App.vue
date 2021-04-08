@@ -1,6 +1,5 @@
 <template>
   <div id="app" >
-    <input type="text">
     <nav class="nav container">
       <div class="navbar" :class="{'active' : menuIsOpen}">
         <div class="btn__menu">
